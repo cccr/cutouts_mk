@@ -1,0 +1,58 @@
+{{ define "main" }}
+
+<header id="site-header">
+  <h1>CUTOUTS</h1>
+</header>
+
+{{ with .Params.author_description }}
+<section id="author-description">
+  <p>{{ . }}</p>
+</section>
+{{ end }}
+
+<section id="player-section">
+  <div id="player-wrapper">
+    <div id="player-placeholder">
+      <span>CHOOSE AN ARTIST</span>
+    </div>
+    <div id="yt-player" hidden></div>
+  </div>
+</section>
+
+<section id="accordion" role="list">
+  {{ range $i, $artist := site.Data.artists }}
+  <div
+    class="artist-bar artist-bar--{{ $artist.slug }}"
+    role="listitem"
+    data-first-video="{{ (index $artist.videos 0).id }}"
+  >
+    <button
+      class="artist-bar__header"
+      aria-expanded="false"
+      aria-controls="panel-{{ $artist.slug }}"
+    >
+      <span class="artist-bar__name">{{ $artist.name | upper }}</span>
+    </button>
+
+    <div
+      id="panel-{{ $artist.slug }}"
+      class="artist-bar__panel"
+      hidden
+    >
+      {{ with $artist.social }}
+      <a class="artist-bar__social" href="{{ . }}" target="_blank" rel="noopener">{{ . }}</a>
+      {{ end }}
+
+      <div class="artist-bar__tracks">
+        {{ range $j, $video := $artist.videos }}
+        <button class="track-btn" data-video-id="{{ $video.id }}">
+          {{ $video.title | upper }}
+        </button>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+  {{ end }}
+</section>
+
+{{ end }}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.LanguageCode }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1">
+  <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with site.Params.description }}{{ . }}{{ end }}{{ end }}">
+  {{ if hugo.IsProduction }}<meta name="robots" content="index, follow">
+  {{ else }}<meta name="robots" content="noindex, nofollow">{{ end }}
+  {{ partial "opengraph.html" . -}}
+  {{ partial "twitter_cards.html" . -}}
+  {{ if hugo.IsProduction }}{{ partial "google_analytics.html" . }}{{ end }}
+  <link rel="stylesheet" href="{{ "css/cutouts.css" | relURL }}">
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script defer src="{{ "js/cutouts.js" | relURL }}"></script>
+</head>
+<body>
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+</body>
+</html>

@@ -1,0 +1,54 @@
+- name: "Pavel Korshunov"
+  slug: "pavel-korshunov"
+  social: ""
+  videos:
+    - id: "I9CIKQzWMYQ"
+      title: "Cutouts I"
+
+- name: "Lizaveta Loban"
+  slug: "lizaveta-loban"
+  social: ""
+  videos:
+    - id: "Qn04HcIZTH8"
+      title: "Cutouts II"
+
+- name: "Mari Sharp"
+  slug: "mari-sharp"
+  social: ""
+  videos:
+    - id: "347jEWVlnO0"
+      title: "Cutouts III — Heartbeat"
+
+- name: "Ivan Kolosov"
+  slug: "ivan-kolosov"
+  social: ""
+  videos:
+    - id: "OJdEb7pxVck"
+      title: "Cutouts IV"
+    - id: "fuLwzZ3aUpY"
+      title: "Cutouts V"
+    - id: "eORfOQQypG0"
+      title: "Cutouts VII"
+    - id: "HYdISuM_9AE"
+      title: "Cutouts IX"
+
+- name: "KULIKO"
+  slug: "kuliko"
+  social: ""
+  videos:
+    - id: "asIBtPs6_94"
+      title: "Cutouts VI — Shavasana"
+
+- name: "Сны Плакучей Ивы (SPI)"
+  slug: "sny-plakuchey-ivy"
+  social: ""
+  videos:
+    - id: "51FeZX-8iII"
+      title: "Cutouts VIII — Гимн Любви"
+
+- name: "Mila Korshunova"
+  slug: "mila-korshunova"
+  social: ""
+  videos:
+    - id: "j1-uORNNMBU"
+      title: "Cutouts X"
