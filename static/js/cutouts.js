@@ -26,6 +26,7 @@ function createPlayer(videoId) {
       rel: 0,
       modestbranding: 1,
       iv_load_policy: 3,
+      origin: location.origin,
     },
     events: {
       onReady: function (e) {
