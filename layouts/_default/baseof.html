@@ -10,6 +10,9 @@
   {{ partial "opengraph.html" . -}}
   {{ partial "twitter_cards.html" . -}}
   {{ if hugo.IsProduction }}{{ partial "google_analytics.html" . }}{{ end }}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;1,300&display=swap">
   <link rel="stylesheet" href="{{ "css/cutouts.css" | relURL }}">
   <script src="https://www.youtube.com/iframe_api"></script>
   <script defer src="{{ "js/cutouts.js" | relURL }}"></script>

@@ -4,13 +4,16 @@
   <h1>CUTOUTS</h1>
 </header>
 
-{{ with .Params.author_description }}
-<section id="author-description">
-  <p>{{ . }}</p>
+{{ with .Content }}
+<section id="intro">
+  {{ . }}
 </section>
 {{ end }}
 
 <section id="player-section">
+  {{ with .Params.player_cue }}
+  <p id="player-cue">{{ . }}</p>
+  {{ end }}
   <div id="player-wrapper">
     <div id="player-placeholder">
       <span>CHOOSE AN ARTIST</span>
@@ -54,5 +57,11 @@
   </div>
   {{ end }}
 </section>
+
+{{ with .Params.album_note }}
+<footer id="album-note">
+  <p>{{ . | markdownify }}</p>
+</footer>
+{{ end }}
 
 {{ end }}

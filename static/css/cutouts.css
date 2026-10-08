@@ -36,17 +36,72 @@ main {
   letter-spacing: 0.3em;
 }
 
-/* --- Author description ----------------------------- */
-#author-description {
-  max-width: 640px;
-  margin: 0 auto 2.5rem;
-  padding: 0 1.5rem;
-  text-align: center;
-  color: #888;
-  font-size: 1rem;
+/* --- Intro text ------------------------------------ */
+/* Lede reads large; the rest sits in a narrower column offset to the right,
+   like pieces laid onto the page. Left-aligned within the 900px grid. */
+#intro,
+#album-note {
+  font-family: 'Spectral', Georgia, 'Times New Roman', serif;
+  font-weight: 300;
+}
+
+#intro {
+  max-width: 900px;
+  margin: 0 auto 4.5rem;
+  padding: 0 2.5rem;
+  color: #a6a6a6;
+  font-size: 1.125rem;
   line-height: 1.7;
-  font-family: Georgia, 'Times New Roman', serif;
-  font-weight: normal;
+}
+
+#intro p {
+  margin: 0 0 1.2em;
+  max-width: 34em;
+  margin-left: auto;
+}
+
+#intro p:first-child {
+  max-width: 21em;
+  margin: 0 0 2.5rem;
+  color: #e6e6e6;
+  font-size: clamp(1.5rem, 3.6vw, 2.25rem);
+  line-height: 1.35;
+}
+
+#intro p:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Player cue (caption above the player) ---------- */
+#player-cue {
+  margin: 0 0 1rem;
+  padding: 0 1.5rem;
+  color: #808080;
+  font-family: 'Spectral', Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+/* --- Album note (closing) --------------------------- */
+#album-note {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2.5rem 6rem;
+  color: #8c8c8c;
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+#album-note p {
+  max-width: 30em;
+  margin: 0;
+}
+
+#album-note em {
+  color: #e6e6e6;
+  font-style: italic;
 }
 
 /* --- Player section --------------------------------- */
@@ -97,7 +152,7 @@ main {
 #accordion {
   max-width: 900px;
   margin: 0 auto;
-  padding: 0 1rem 5rem;
+  padding: 0 1rem 4rem;
 }
 
 .artist-bar {
@@ -268,6 +323,26 @@ main {
   }
 
   #accordion {
-    padding: 0 0.5rem 4rem;
+    padding: 0 0.5rem 3rem;
+  }
+
+  #intro,
+  #album-note {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1.0625rem;
+  }
+
+  #intro {
+    margin-bottom: 3rem;
+  }
+
+  #intro p:first-child {
+    margin-bottom: 1.75rem;
+  }
+
+  #player-cue {
+    padding: 0 0.5rem;
+    font-size: 1rem;
   }
 }
